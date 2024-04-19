@@ -16,7 +16,7 @@ jobs:
     env:
       JVM_OPTS: -Xmx6G
       IS_BUILD_SIGNED: ${{ secrets.KEYSTORE != '' }}
-      UPLOAD_ARTIFACTS: ${{ github.event_name != 'pull_request' || contains(github.event.pull_request.labels.*.name, 'ci') }}
+      UPLOAD_ARTIFACTS: false
       CMAKE_VERSION: "3.22.1"
       NDK_VERSION: "26.1.10909125"
 
